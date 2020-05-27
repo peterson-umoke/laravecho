@@ -4,7 +4,7 @@ import 'package:laravel_echo_pusher/connector/index.dart';
 class NullConnector extends Connector {
   NullConnector(Map<String, dynamic> options) : super(options);
 
-  dynamic channels = {};
+  Map channels = {};
 
   @override
   void connect() {}
@@ -13,20 +13,19 @@ class NullConnector extends Connector {
       new NullChannel();
 
   @override
-  NullChannel channel(String channel) => new NullChannel();
+  NullChannel channel(String name) => new NullChannel();
 
   @override
-  NullPrivateChannel privateChannel(String channel) => new NullPrivateChannel();
+  NullPrivateChannel privateChannel(String name) => new NullPrivateChannel();
 
   @override
-  NullPresenceChannel presenceChannel(String channel) =>
-      new NullPresenceChannel();
+  NullPresenceChannel presenceChannel(String name) => new NullPresenceChannel();
 
   @override
-  void leave(String channel) {}
+  void leave(String name) {}
 
   @override
-  void leaveChannel(String channel) {}
+  void leaveChannel(String name) {}
 
   @override
   String socketId() => "fake-socket-id";
