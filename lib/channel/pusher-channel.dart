@@ -10,7 +10,7 @@ class PusherChannel extends Channel {
   dynamic name;
 
   /// Channel options.
-  Map options;
+  Map<String, dynamic> options;
 
   /// The event formatter.
   EventFormatter eventFormatter;
@@ -19,7 +19,8 @@ class PusherChannel extends Channel {
   dynamic subscription;
 
   /// Create a new class instance.
-  PusherChannel(dynamic pusher, dynamic name, dynamic options) : super() {
+  PusherChannel(dynamic pusher, dynamic name, Map<String, dynamic> options)
+      : super() {
     this.name = name;
     this.pusher = pusher;
     this.options = options;

@@ -9,7 +9,7 @@ class SocketIoChannel extends Channel {
   dynamic name;
 
   /// Channel options.
-  Map options;
+  Map<String, dynamic> options;
 
   /// The event formatter.
   EventFormatter eventFormatter;
@@ -21,7 +21,8 @@ class SocketIoChannel extends Channel {
   Map events = {};
 
   /// Create a new class instance.
-  SocketIoChannel(dynamic socket, String name, Map options) : super() {
+  SocketIoChannel(dynamic socket, String name, Map<String, dynamic> options)
+      : super() {
     this.name = name;
     this.socket = socket;
     this.options = options;

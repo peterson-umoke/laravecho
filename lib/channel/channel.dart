@@ -1,7 +1,7 @@
 /// This class represents a basic channel.
 abstract class Channel {
   /// The Echo options.
-  Map options;
+  Map<String, dynamic> options;
 
   /// Listen for an event on the channel instance.
   Channel listen(String event, Function callback);
