@@ -1,51 +1,36 @@
-import 'package:laravel_echo_pusher/channel/channel.dart';
-import 'package:laravel_echo_pusher/channel/presence-channel.dart';
+import 'package:laravel_echo_pusher/channel/index.dart';
 import 'package:laravel_echo_pusher/connector/index.dart';
 
 class NullConnector extends Connector {
   NullConnector(Map<String, dynamic> options) : super(options);
 
-  @override
-  Channel channel(String channel) {
-    // TODO: implement channel
-    throw UnimplementedError();
-  }
+  dynamic channels = {};
 
   @override
-  void connect() {
-    // TODO: implement connect
-  }
+  void connect() {}
+
+  NullChannel listen(String name, String event, Function callback) =>
+      new NullChannel();
 
   @override
-  void disconnect() {
-    // TODO: implement disconnect
-  }
+  NullChannel channel(String channel) => new NullChannel();
 
   @override
-  void leave(String channel) {
-    // TODO: implement leave
-  }
+  NullPrivateChannel privateChannel(String channel) => new NullPrivateChannel();
 
   @override
-  void leaveChannel(String channel) {
-    // TODO: implement leaveChannel
-  }
+  NullPresenceChannel presenceChannel(String channel) =>
+      new NullPresenceChannel();
 
   @override
-  PresenceChannel presenceChannel(String channel) {
-    // TODO: implement presenceChannel
-    throw UnimplementedError();
-  }
+  void leave(String channel) {}
 
   @override
-  Channel privateChannel(String channel) {
-    // TODO: implement privateChannel
-    throw UnimplementedError();
-  }
+  void leaveChannel(String channel) {}
 
   @override
-  String socketId() {
-    // TODO: implement socketId
-    throw UnimplementedError();
-  }
+  String socketId() => "fake-socket-id";
+
+  @override
+  void disconnect() {}
 }
