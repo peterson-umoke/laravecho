@@ -1,0 +1,3 @@
+class NullConnector {
+  NullConnector(options);
+}

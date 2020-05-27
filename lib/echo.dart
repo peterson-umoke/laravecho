@@ -1,6 +1,7 @@
 library laravel_echo_pusher;
 
 import './channel/index.dart';
+import './connector/index.dart';
 
 /// This class is the primary API for interacting with broadcasting.
 class Echo {
@@ -63,19 +64,8 @@ class Echo {
   /// Get the Socket ID for the connection.
   String socketId() => this.connector.socketId();
 
+  /// TODO: set this up
   /// Register 3rd party request interceptors. These are used to automatically
   /// send a connections socket id to a Laravel app with a X-Socket-Id header.
   void registerInterceptors() {}
-}
-
-class NullConnector {
-  NullConnector(options);
-}
-
-class SocketIoConnector {
-  SocketIoConnector(options);
-}
-
-class PusherConnector {
-  PusherConnector(options);
 }

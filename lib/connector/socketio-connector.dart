@@ -1,0 +1,3 @@
+class SocketIoConnector {
+  SocketIoConnector(options);
+}
