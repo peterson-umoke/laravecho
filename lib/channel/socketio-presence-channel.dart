@@ -1,4 +1,4 @@
-import 'package:laravel_echo_pusher/channel/index.dart';
+import './index.dart';
 
 class SocketIoPresenceChannel extends SocketIoChannel
     implements PresenceChannel {

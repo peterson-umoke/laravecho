@@ -1,5 +1,5 @@
-import 'package:laravel_echo_pusher/channel/index.dart';
-import 'package:laravel_echo_pusher/connector/connector.dart';
+import 'package:laravecho/channel/index.dart';
+import 'package:laravecho/connector/connector.dart';
 import 'package:pusher_websocket_flutter/pusher.dart';
 
 class PusherConnector extends Connector {

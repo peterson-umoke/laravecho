@@ -1,8 +1,8 @@
-name: laravel_echo_pusher
+name: laravecho
 description: A new Flutter package project.
 version: 0.0.1
-author: Peterson Umoke
-homepage:
+homepage: http://petersonumoke.com
+repository: https://github.com/peterson-umoke/laravecho
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

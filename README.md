@@ -1,6 +1,6 @@
-# LaravelEchoPusher
+# Laravecho
 
-A new Flutter package project.
+A new Flutter package project for laravel echo supports pusher and socket.io
 
 ## Getting Started
 

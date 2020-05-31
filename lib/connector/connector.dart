@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:laravel_echo_pusher/channel/index.dart';
+
+import '../channel/index.dart';
 
 abstract class Connector {
   Map _defaultOptions = {

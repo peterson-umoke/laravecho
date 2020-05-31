@@ -1,5 +1,7 @@
-import 'package:laravel_echo_pusher/channel/index.dart';
-import 'package:laravel_echo_pusher/connector/index.dart';
+import 'package:laravecho/channel/channel.dart';
+import 'package:laravecho/channel/presence-channel.dart';
+
+import './index.dart';
 
 class SocketIoConnector extends Connector {
   dynamic socket;
@@ -53,4 +55,22 @@ class SocketIoConnector extends Connector {
 
   @override
   void disconnect() {}
+
+  @override
+  Channel channel(String channel) {
+    // TODO: implement channel
+    throw UnimplementedError();
+  }
+
+  @override
+  PresenceChannel presenceChannel(String channel) {
+    // TODO: implement presenceChannel
+    throw UnimplementedError();
+  }
+
+  @override
+  Channel privateChannel(String channel) {
+    // TODO: implement privateChannel
+    throw UnimplementedError();
+  }
 }

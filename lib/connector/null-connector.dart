@@ -1,5 +1,5 @@
-import 'package:laravel_echo_pusher/channel/index.dart';
-import 'package:laravel_echo_pusher/connector/index.dart';
+import './../channel/index.dart';
+import './index.dart';
 
 class NullConnector extends Connector {
   NullConnector(Map<String, dynamic> options) : super(options);
