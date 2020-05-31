@@ -2,24 +2,45 @@ import 'package:laravel_echo_pusher/channel/index.dart';
 import 'package:laravel_echo_pusher/connector/index.dart';
 
 class SocketIoConnector extends Connector {
+  dynamic socket;
+
+  Map channels = {};
+
   SocketIoConnector(Map<String, dynamic> options) : super(options);
 
   @override
-  void connect() {}
+  void connect() {
+    var io = this.getSocketIO();
+    this.socket = io(this.options['host']);
 
-  SocketIoChannel listen(String name, String event, Function callback) =>
-      new SocketIoChannel();
+    return this.socket;
+  }
 
-  @override
-  SocketIoChannel channel(String name) => new SocketIoChannel();
+  dynamic getSocketIO() {
+    //
 
-  @override
-  SocketIoPrivateChannel privateChannel(String name) =>
-      new SocketIoPrivateChannel();
+    if (this.options['client'] != null) {
+      //
+    } else if (this.options['client'] == null) {
+      //
+    }
 
-  @override
-  SocketIoPresenceChannel presenceChannel(String name) =>
-      new SocketIoPresenceChannel();
+    throw new Error();
+  }
+
+//  SocketIoChannel listen(String name, String event, Function callback) =>
+//      new SocketIoChannel();
+//
+//  @override
+//  SocketIoChannel channel(String name) => new SocketIoChannel();
+//
+//  @override
+//  SocketIoPrivateChannel privateChannel(String name) =>
+//      new SocketIoPrivateChannel();
+//
+//  @override
+//  SocketIoPresenceChannel presenceChannel(String name) =>
+//      new SocketIoPresenceChannel();
 
   @override
   void leave(String name) {}
